@@ -12,8 +12,11 @@
       "AmplifyAppId": "d1dztuiwd6m389"
     },
     "categories": {
-      "auth": {
-        "miappbfd4fb76": {}
+      "function": {
+        "miapp649af301": {
+          "deploymentBucketName": "amplify-miapp-dev-154640-deployment",
+          "s3Key": "amplify-builds/miapp649af301-395a697378334d377952-build.zip"
+        }
       }
     }
   }

@@ -1,10 +1,26 @@
 {
-  "auth": {
-    "miappbfd4fb76": {
-      "service": "Cognito",
+  "auth": {},
+  "function": {
+    "miapp649af301": {
+      "build": true,
       "providerPlugin": "awscloudformation",
-      "dependsOn": [],
-      "customAuth": false
+      "service": "Lambda"
+    }
+  },
+  "api": {
+    "cryptoapi": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "miapp649af301",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ]
     }
   }
 }

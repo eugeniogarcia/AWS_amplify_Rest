@@ -42,7 +42,7 @@ Lo inicializamos:
 amplify init
 ```
 
-## Autenticación
+## Crear un Backend (Autenticación)
 
 Añadimos el backend de autenticación:
 
@@ -52,3 +52,100 @@ amplify add auth
 amplify push
 ```
 
+## Crear un Backend (Lambda)
+
+```ps
+amplify add function
+```
+
+## Eliminar un Backend
+
+```ps
+amplify remove auth
+```
+
+## Eliminar un proyecto
+
+```ps
+amplify delete
+```
+
+# Codificación
+
+En _index_ añadimos Amplify:
+
+```js
+//Configura React para trabajar con Amplify
+import Amplify from 'aws-amplify'
+import config from './aws-exports'
+Amplify.configure(config)
+```
+
+## Autenticación
+
+Incluimos la App en un wrapper:
+
+```js
+export default withAuthenticator(App)
+```
+
+Incluimos en la respuesta un control para salir
+
+```js
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+      </header>
+      <h1>Hola desde AWS Amplify</h1>
+      <AmplifySignOut />
+    </div>
+```
+
+## Función
+
+Para crear una función haremos lo siguiente:
+
+```ps
+amplify add function
+```
+
+Esto crear un directorio en nuestro projecto en la carpeta _backend_. Cada función tiene una _app.js_ donde se implementan los end-points de nuestra función, usando Express - porque es el runtime que hemos elegido al crear la fución.
+
+## Api
+
+Para crear una api hacemos:
+
+```ps
+amplify add api
+```
+
+Para publicar los cambios:
+
+```ps
+amplify push
+
+Current Environment: dev
+
+| Category | Resource name | Operation | Provider plugin   |
+| -------- | ------------- | --------- | ----------------- |
+| Function | miapp649af301 | Create    | awscloudformation |
+| Api      | cryptoapi     | Create    | awscloudformation |
+| Auth     | miappbfd4fb76 | Delete    | awscloudformation |
+```
+
+Podemos ver el estado de Amplify:
+
+```ps
+amplify status
+
+Current Environment: dev
+
+| Category | Resource name | Operation | Provider plugin   |
+| -------- | ------------- | --------- | ----------------- |
+| Function | miapp649af301 | No Change | awscloudformation |
+| Api      | cryptoapi     | No Change | awscloudformation |
+
+REST API endpoint: https://fqk9vnz7qf.execute-api.eu-west-2.amazonaws.com/dev
+```
+
+Como podemos ver el comando nos indica que tenemos _pendiente_ de subir a AWS.

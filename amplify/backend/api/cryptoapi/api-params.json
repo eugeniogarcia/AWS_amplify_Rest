@@ -1,0 +1,35 @@
+{
+  "paths": [
+    {
+      "name": "/coins",
+      "lambdaFunction": "miapp649af301",
+      "privacy": {
+        "open": true
+      },
+      "policyResourceName": "/coins"
+    }
+  ],
+  "resourceName": "cryptoapi",
+  "apiName": "cryptoapi",
+  "functionArns": [
+    {
+      "lambdaFunction": "miapp649af301"
+    }
+  ],
+  "privacy": {
+    "auth": 0,
+    "unauth": 0,
+    "authRoleName": "amplify-miapp-dev-154640-authRole",
+    "unAuthRoleName": "amplify-miapp-dev-154640-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "miapp649af301",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    }
+  ]
+}
