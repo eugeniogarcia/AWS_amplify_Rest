@@ -149,3 +149,16 @@ REST API endpoint: https://fqk9vnz7qf.execute-api.eu-west-2.amazonaws.com/dev
 ```
 
 Como podemos ver el comando nos indica que tenemos _pendiente_ de subir a AWS.
+
+## Axios
+
+Con Axios tenemos una librería que permite, tanto desde _Node.js_ como desde un navegador hacer peticiones http.
+
+Instalaremos axios en la aplicación js que se ha creado para nuestra función, porque es desde nuestra función desde la que queremos hacer uso de ella. Podemos encontrar la aplicación que se ha creado para esta función en _amplify\backend\function\miapp649af301_:
+
+```ps
+cd C:\Users\Eugenio\Downloads\mi-app\amplify\backend\function\miapp649af301\src
+
+npm install axios
+```
+
