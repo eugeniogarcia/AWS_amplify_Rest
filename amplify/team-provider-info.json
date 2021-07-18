@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-miapp-dev-154640-authRole",
+      "UnauthRoleArn": "arn:aws:iam::483497128006:role/amplify-miapp-dev-154640-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::483497128006:role/amplify-miapp-dev-154640-authRole",
+      "Region": "eu-west-2",
+      "DeploymentBucketName": "amplify-miapp-dev-154640-deployment",
+      "UnauthRoleName": "amplify-miapp-dev-154640-unauthRole",
+      "StackName": "amplify-miapp-dev-154640",
+      "StackId": "arn:aws:cloudformation:eu-west-2:483497128006:stack/amplify-miapp-dev-154640/973bccd0-e7ce-11eb-9308-0af3994a2dba",
+      "AmplifyAppId": "d1dztuiwd6m389"
+    },
+    "categories": {
+      "auth": {
+        "miappbfd4fb76": {}
+      }
+    }
+  }
+}
